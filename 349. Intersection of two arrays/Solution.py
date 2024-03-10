@@ -5,6 +5,10 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
+        nums1 = list(set(nums1))
+        nums1.sort()
+        nums2 = list(set(nums2))
+        nums2.sort()
         
         i = 0 #the indicator of num1
         j = 0 #indicator of num2
