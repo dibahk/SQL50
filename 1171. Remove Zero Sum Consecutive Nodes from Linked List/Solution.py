@@ -9,4 +9,15 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        
+        start = ListNode(0, head)
+        while start is not None:
+            sum = 0
+            end = start.next
+            while end is not None:
+                sum += start.val
+                if sum == 0:
+                    start.next = end.next
+                end = end.next
+            start = start.next
+
+        return ListNode(0, head)
