@@ -2,8 +2,10 @@ class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         m_t = max(target)
         m_a = max(arr)
+        # Early stopping
         if m_a != m_t:
             return False
+        # creating a list to keep record of the data
         l_a = [0] * (m_a+1)
         l_t = [0] * (m_t+1)
         def list_maker(l, l_l):
